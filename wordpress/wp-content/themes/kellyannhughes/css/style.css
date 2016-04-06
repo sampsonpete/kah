@@ -1,0 +1,234 @@
+/* -------------------------------------------------
+Fonts
+------------------------------------------------- */
+
+/* Engravers Gothic */
+@import url('../fonts/engravers_gothic/stylesheet.css'); 
+
+
+/* -------------------------------------------------
+General
+------------------------------------------------- */
+
+body 
+{
+	background-color: #fff;
+	color: black;
+	font-family: EngraversGothicBTRegular, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-weight: normal;
+	font-style: normal;
+	font-size: 93.75%; /* 15px/16px */
+	letter-spacing: 0.2em;
+	line-height: 2;
+	text-transform: uppercase;
+}
+
+a
+{
+	text-decoration: none;
+}
+
+a:link,
+a:visited
+{
+	border-bottom: 1px solid transparent;
+	color: #999;
+	transition: border 0.3s;
+	-moz-transition: border 0.3s; 
+	-webkit-transition: border 0.3s; 
+	-o-transition: border 0.3s; 
+}
+a:hover,
+a:active,
+a:focus
+{
+	border-bottom: 1px solid #999;
+	color: #999;
+}
+
+h1
+{
+	font-size: 1em;
+	font-weight: normal;
+}
+
+ul
+{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.invisible
+{
+	visibility: hidden;
+}
+
+.hidden
+{
+	display: none;
+}
+
+/* Clearfix: Updated to prevent margin-collapsing on child elements.
+   j.mp/bestclearfix */
+.clearfix:before, .clearfix:after { content: "\0020"; display: block; height: 0; overflow: hidden; }
+.clearfix:after { clear: both; }
+/* Fix clearfix: blueprintcss.lighthouseapp.com/projects/15318/tickets/5-extra-margin-padding-bottom-of-page */
+.clearfix { zoom: 1; }
+
+/* -------------------------------------------------
+Wrapper
+------------------------------------------------- */
+
+#wrapper
+{
+	margin: 50px 30px 0;
+	position: relative;
+}
+
+/* -------------------------------------------------
+Header
+------------------------------------------------- */
+
+header
+{
+	margin: 0 0 50px;
+	position: relative;
+	text-align: center;
+}
+
+	header h1
+	{
+		/* float: left; */
+		margin: 0;
+	}
+
+	header nav
+	{
+		/* float: right; */
+	}
+
+		header nav li
+		{
+			display: inline;
+			margin: 0 0.2em;
+		}
+
+	header div#info_wrapper
+	{
+		display: none;
+		font-size: 0.8em;
+		height: 186px;
+		line-height: 1.5;
+		margin: 0 auto;
+		position: relative;
+		width: 900px;
+	}
+	
+	header p#about, 
+	header p#clients, 
+	header address#contact
+	{
+		opacity: 0;
+		margin: 0;
+		position: absolute;
+		visibility: hidden;
+		width: 100%;
+	}
+	
+	header p#about
+	{
+		margin-top: 73px;
+	}
+	header p#clients
+	{
+		margin-top: 22px;
+	}
+	
+	header address#contact
+	{
+		font-style: normal;
+		margin-top: 95px;
+	}
+	
+		header address#contact a:link,
+		header address#contact a:visited
+		{
+			color: black;
+		}
+		
+		header address#contact a:hover,
+		header address#contact a:active,
+		header address#contact a:focus
+		{
+			border-bottom: 1px solid black;
+			color: black;
+		}
+	
+
+/* -------------------------------------------------
+Projects
+------------------------------------------------- */
+
+div.project_wrapper
+{
+	margin: 0 auto 200px;
+	width: 912px;
+}
+
+	div.project_wrapper div.project_images
+	{
+		cursor: pointer;
+		height: 600px;
+		width: 912px;
+	}
+	
+		div.project_wrapper div.project_images img
+		{
+			height: 100%;
+			width: 100%;
+		}
+		
+		div.project_wrapper div.project_images p
+		{
+			background-color: #eee;
+			font-size: 0.8em;
+			height: 24px;
+			margin: 0;
+			padding: 288px 0;
+			text-align: center;
+			width: 100%;
+		}
+		
+	div.project_wrapper div.project_caption
+	{
+		font-size: 0.8em;
+		margin-top: 5px;
+		margin-bottom: -29px;
+	}
+		
+	div.project_wrapper div.project_nav
+	{
+		margin: 20px auto;
+		text-align: center;
+	}
+	
+		div.project_wrapper div.project_nav a
+		{
+			background-image: url('../img/pager-dots.png');
+			background-position: 19px 0;
+			border: 1px solid white;
+			display: inline-block;
+			height: 19px;
+			text-indent: -999em;
+			width: 19px;
+		}
+		
+		div.project_wrapper div.project_nav a.activeSlide
+		{
+			background-position: 0 0;
+		}
+
+
+
+
