@@ -146,21 +146,21 @@ header
 		}
 	}
 
-	header li.menu-item a:link,
-	header li.menu-item a:visited 
+	.archive header li.menu-item a:link,
+	.archive header li.menu-item a:visited 
 	{
 		border-bottom-color: #E5E5E5;
 	}
 
-	header li.menu-item a:hover,
-	header li.menu-item a:active,
-	header li.menu-item a:focus 
+	.archive header li.menu-item a:hover,
+	.archive header li.menu-item a:active,
+	.archive header li.menu-item a:focus 
 	{
 		border-bottom-color: black;
 	}
 
-	header li.current-menu-item a:link,
-	header li.current-menu-item a:visited 
+	.archive header li.current-menu-item a:link,
+	.archive header li.current-menu-item a:visited 
 	{
 		border-bottom-color: black;
 	}
@@ -204,17 +204,6 @@ div.project_wrapper
 			max-width: 100%;
 		}
 		
-		/*div.project_wrapper div.project_images p
-		{
-			background-color: #eee;
-			font-size: 0.8em;
-			height: 24px;
-			margin: 0;
-			padding: 288px 0;
-			text-align: center;
-			width: 100%;
-		}*/
-		
 	div.project_wrapper div.project_caption
 	{
 		font-size: 0.8em;
@@ -238,7 +227,3 @@ div.project_wrapper
 		{
 			opacity: 1.0;
 		}
-
-
-
-
