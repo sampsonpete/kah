@@ -14,25 +14,16 @@
 
 get_header(); ?>
 
-		<section>
+	<section>
+	
+		<?php if ( have_posts() ) : while ( have_posts() ) : the_post();
+	
+			get_template_part( 'content' );
 		
-			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-		
-			<div class="project_wrapper">
-				<div class="project_images">
-					<?php the_content(); ?>	
-				</div>
-				<?php $caption = get_post_meta( $post->ID, 'caption', true );
-				if ( $caption ) { ?>
-					<div class="project_caption"><?php echo $caption; ?></div>	
-				<?php } ?>
-				<div class="project_nav"></div>		
-			</div>
+		endwhile; else: ?>
+		<p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
+		<?php endif; ?>
 			
-			<?php endwhile; else: ?>
-			<p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
-			<?php endif; ?>
-			
-		</section>
+	</section>
 
 <?php get_footer(); ?>
