@@ -94,7 +94,7 @@ Header
 
 header
 {
-	margin: 0 0 10em;
+	margin: 0 0 8em;
 	position: relative;
 	text-align: left;
 }
@@ -141,24 +141,27 @@ header
 
 	@media screen and (min-width: 28em) {
 		header nav li
-			{
-				display: inline;
-			}
+		{
+			display: inline;
+		}
 	}
 
 	header li.menu-item a:link,
-	header li.menu-item a:visited {
+	header li.menu-item a:visited 
+	{
 		border-bottom-color: #E5E5E5;
 	}
 
 	header li.menu-item a:hover,
 	header li.menu-item a:active,
-	header li.menu-item a:focus {
+	header li.menu-item a:focus 
+	{
 		border-bottom-color: black;
 	}
 
 	header li.current-menu-item a:link,
-	header li.current-menu-item a:visited {
+	header li.current-menu-item a:visited 
+	{
 		border-bottom-color: black;
 	}
 
@@ -168,7 +171,7 @@ Footer
 
 footer
 {
-	margin: 10em 0 0;
+	margin: 8em 0 0;
 	position: relative;
 	text-align: left;
 }
@@ -186,24 +189,22 @@ Projects
 
 div.project_wrapper
 {
-	margin: 0 auto 200px;
-	width: 912px;
+	margin: 0 auto 8em;
+	max-width: 60.8em;
 }
 
 	div.project_wrapper div.project_images
 	{
 		cursor: pointer;
-		height: 600px;
-		width: 912px;
 	}
 	
 		div.project_wrapper div.project_images img
 		{
-			height: 100%;
-			width: 100%;
+			height: auto;
+			max-width: 100%;
 		}
 		
-		div.project_wrapper div.project_images p
+		/*div.project_wrapper div.project_images p
 		{
 			background-color: #eee;
 			font-size: 0.8em;
@@ -212,7 +213,7 @@ div.project_wrapper
 			padding: 288px 0;
 			text-align: center;
 			width: 100%;
-		}
+		}*/
 		
 	div.project_wrapper div.project_caption
 	{
@@ -227,20 +228,15 @@ div.project_wrapper
 		text-align: center;
 	}
 	
-		div.project_wrapper div.project_nav a
+		div.project_wrapper div.project_nav span
 		{
-			background-image: url('../img/pager-dots.png');
-			background-position: 19px 0;
-			border: 1px solid white;
-			display: inline-block;
-			height: 19px;
-			text-indent: -999em;
-			width: 19px;
+			font-size: 1.5em;
+			opacity: 0.2;
 		}
 		
-		div.project_wrapper div.project_nav a.activeSlide
+		div.project_wrapper div.project_nav span.cycle-pager-active
 		{
-			background-position: 0 0;
+			opacity: 1.0;
 		}
 
 

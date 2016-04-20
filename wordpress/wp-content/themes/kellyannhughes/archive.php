@@ -22,12 +22,12 @@ get_header(); ?>
 			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 		
 			<div class="project_wrapper">
-				<div class="project_images">
-					<?php the_content(); ?>	
+				<div class="project_images cycle-slideshow">
+					<?php echo $post->post_content; ?> 
 				</div>
 				<?php $caption = get_post_meta( $post->ID, 'caption', true );
 				if ( $caption ) { ?>
-					<div class="project_caption"><?php echo $caption; ?></div>	
+					<p class="project_caption"><?php echo $caption; ?></p>
 				<?php } ?>
 				<div class="project_nav"></div>		
 			</div>
