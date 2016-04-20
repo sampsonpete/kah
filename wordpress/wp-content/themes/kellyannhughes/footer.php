@@ -7,7 +7,18 @@
  * @package WordPress
  * @subpackage KAH
  */
-?>
+?>	
+	<footer>
+		<?php if ( has_nav_menu( 'secondary' ) ) : ?>
+		<nav>
+			<?php
+				wp_nav_menu( array(
+					'theme_location' => 'secondary',
+				 ) );
+			?>
+		</nav>
+		<?php endif; ?>
+	</footer>
 		
 	</div><!-- close #wrapper -->
 		

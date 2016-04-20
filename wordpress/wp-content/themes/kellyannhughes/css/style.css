@@ -19,34 +19,36 @@ body
 	font-style: normal;
 	font-size: 93.75%; /* 15px/16px */
 	letter-spacing: 0.2em;
-	line-height: 2;
+	line-height: 1.5;
 	text-transform: uppercase;
 }
 
 a
 {
 	text-decoration: none;
+	transition: border 0.3s;
+	-moz-transition: border 0.3s; 
+	-webkit-transition: border 0.3s; 
+	-o-transition: border 0.3s;
+	outline: 0;
 }
 
 a:link,
 a:visited
 {
-	border-bottom: 1px solid transparent;
-	color: #999;
-	transition: border 0.3s;
-	-moz-transition: border 0.3s; 
-	-webkit-transition: border 0.3s; 
-	-o-transition: border 0.3s; 
+	border-bottom: 1px solid black;
+	color: black;
+	padding-bottom: 0.4em;
 }
 a:hover,
 a:active,
 a:focus
 {
-	border-bottom: 1px solid #999;
-	color: #999;
+	border-bottom: 1px solid #E5E5E5;
+	color: black;
 }
 
-h1
+h1, h2, h3, h4, h5, h6
 {
 	font-size: 1em;
 	font-weight: normal;
@@ -82,7 +84,7 @@ Wrapper
 
 #wrapper
 {
-	margin: 50px 30px 0;
+	margin: 2em;
 	position: relative;
 }
 
@@ -92,79 +94,91 @@ Header
 
 header
 {
-	margin: 0 0 50px;
+	margin: 0 0 10em;
 	position: relative;
-	text-align: center;
+	text-align: left;
 }
 
 	header h1
 	{
-		/* float: left; */
 		margin: 0;
 	}
 
-	header nav
+	header h1 a 
 	{
-		/* float: right; */
+		transition: color 0.3s;
+		-moz-transition: color 0.3s; 
+		-webkit-transition: color 0.3s; 
+		-o-transition: color 0.3s;
 	}
 
+	header h1 a:link,
+	header h1 a:visited 
+	{
+		border-bottom: none;
+		color: black;
+	}
+
+	header h1 a:hover,
+	header h1 a:active,
+	header h1 a:focus 
+	{
+		color: #999;
+	}
+
+	header h2 
+	{
+		color: #999;
+		margin: 0 0 2em;
+		width: 75%;
+	}
+
+	header nav li
+	{
+		display: block;
+		margin: 0 0.4em 1em 0;
+	}
+
+	@media screen and (min-width: 28em) {
 		header nav li
-		{
-			display: inline;
-			margin: 0 0.2em;
-		}
+			{
+				display: inline;
+			}
+	}
 
-	header div#info_wrapper
+	header li.menu-item a:link,
+	header li.menu-item a:visited {
+		border-bottom-color: #E5E5E5;
+	}
+
+	header li.menu-item a:hover,
+	header li.menu-item a:active,
+	header li.menu-item a:focus {
+		border-bottom-color: black;
+	}
+
+	header li.current-menu-item a:link,
+	header li.current-menu-item a:visited {
+		border-bottom-color: black;
+	}
+
+/* -------------------------------------------------
+Footer
+------------------------------------------------- */
+
+footer
+{
+	margin: 10em 0 0;
+	position: relative;
+	text-align: left;
+}
+
+	footer nav li
 	{
-		display: none;
+		display: inline;
 		font-size: 0.8em;
-		height: 186px;
-		line-height: 1.5;
-		margin: 0 auto;
-		position: relative;
-		width: 900px;
+		margin: 0 0.4em 0 0;
 	}
-	
-	header p#about, 
-	header p#clients, 
-	header address#contact
-	{
-		opacity: 0;
-		margin: 0;
-		position: absolute;
-		visibility: hidden;
-		width: 100%;
-	}
-	
-	header p#about
-	{
-		margin-top: 73px;
-	}
-	header p#clients
-	{
-		margin-top: 22px;
-	}
-	
-	header address#contact
-	{
-		font-style: normal;
-		margin-top: 95px;
-	}
-	
-		header address#contact a:link,
-		header address#contact a:visited
-		{
-			color: black;
-		}
-		
-		header address#contact a:hover,
-		header address#contact a:active,
-		header address#contact a:focus
-		{
-			border-bottom: 1px solid black;
-			color: black;
-		}
-	
 
 /* -------------------------------------------------
 Projects
