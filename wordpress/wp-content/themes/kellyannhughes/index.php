@@ -14,16 +14,16 @@
 
 get_header(); ?>
 
-	<section>
+	<div class="homepage_slideshow cycle-slideshow">
 	
 		<?php if ( have_posts() ) : while ( have_posts() ) : the_post();
 	
-			get_template_part( 'content' );
+			echo $post->post_content;
 		
 		endwhile; else: ?>
 		<p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
 		<?php endif; ?>
 			
-	</section>
+	</div>
 
 <?php get_footer(); ?>

@@ -31,6 +31,7 @@
 	<!-- Scripts -->
 	<script src="<?php bloginfo( 'template_directory' ); ?>/js/script.js"></script>
 	<script src="<?php bloginfo( 'template_directory' ); ?>/js/jquery.cycle2.min.js"></script>
+	<script src="<?php bloginfo( 'template_directory' ); ?>/js/jquery.imagefit.js"></script>
 
 	<?php wp_footer(); ?>
 

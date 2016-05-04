@@ -3,12 +3,10 @@ Kelly-Ann Hughes website scripts
 
 */
 
-// jQuery.noConflict();
-
 // add js enabled class
-	document.documentElement.className = 'js-enabled';
+document.documentElement.className = 'js-enabled';
 
-jQuery(document).ready(function($) {
+$(document).ready(function() {
 
 	// image slideshow
 	$('div.project_images').each(function() {
@@ -28,6 +26,21 @@ jQuery(document).ready(function($) {
 	// hide default title tooltips from images
 	$('img').attr('title', '');
 	
+});
+
+var options = {
+    mode: 'outside',
+    force: 'true',
+    halign: 'center',
+    valign: 'top'
+};
+
+$(window).load(function() {
+    $('div.homepage_slideshow').imagefit(options);
+});
+
+$(window).resize(function() {
+    $('div.homepage_slideshow').imagefit(options);
 });
 
 

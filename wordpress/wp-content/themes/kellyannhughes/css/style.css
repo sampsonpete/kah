@@ -10,6 +10,12 @@ Fonts
 General
 ------------------------------------------------- */
 
+html,
+body
+{
+	height: 100%;
+}
+
 body 
 {
 	background-color: #fff;
@@ -84,7 +90,7 @@ Wrapper
 
 #wrapper
 {
-	margin: 2em;
+	height: 100%;
 	position: relative;
 }
 
@@ -94,7 +100,8 @@ Header
 
 header
 {
-	margin: 0 0 8em;
+	margin: 0 2em 8em;
+	padding-top: 2em;
 	position: relative;
 	text-align: left;
 }
@@ -171,7 +178,7 @@ Footer
 
 footer
 {
-	margin: 8em 0 0;
+	margin: 8em 2em 2em;
 	position: relative;
 	text-align: left;
 }
@@ -184,8 +191,67 @@ footer
 	}
 
 /* -------------------------------------------------
+Home
+------------------------------------------------- */
+
+body.home .homepage_slideshow 
+{
+	overflow: hidden;
+	top: -4rem;
+	right: 0;
+	width: 100%;
+	height: 30rem;
+}
+
+body.home .homepage_slideshow p
+{
+	height: 100%;
+	margin: 0;
+}
+
+body.home .homepage_slideshow img 
+{
+	width: 100%;
+	height: auto;
+}
+
+body.home footer
+{
+	top: -6rem;
+}
+
+@media screen and (min-width: 40em) {
+	body.home .homepage_slideshow 
+	{
+		height: 60rem;
+	}
+}
+
+@media screen and (min-width: 60em) {
+	body.home .homepage_slideshow
+	{
+		position: absolute !important;
+		top: 0;
+		right: 0;
+		width: 50%;
+		height: 100%;
+	}
+
+	body.home footer 
+	{
+		position: absolute;
+		top: auto;
+		bottom: 0;
+	}
+}
+
+/* -------------------------------------------------
 Projects
 ------------------------------------------------- */
+
+section.posts_wrapper {
+	margin: 0 2rem;
+}
 
 div.project_wrapper
 {
