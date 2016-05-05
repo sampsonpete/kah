@@ -255,41 +255,59 @@ section.posts_wrapper {
 
 div.project_wrapper
 {
-	margin: 0 auto 8em;
-	max-width: 60.8em;
+	margin: 0 auto 8rem;
+	max-width: 60.8rem;
 }
 
-	div.project_wrapper div.project_images
+	.project_images
 	{
 		cursor: pointer;
 	}
 	
-		div.project_wrapper div.project_images img
+		.project_images img
 		{
 			height: auto;
 			max-width: 100%;
 		}
+
+		.project_images .project_credits 
+		{
+			background-color: #eee;
+			font-size: 0.8rem;
+			height: 100%;
+			text-align: center;
+			width: 100%;
+		}
+
+		.project_images .project_credits p
+		{
+			margin: 0 auto;
+			position: relative;
+			top: 50%;
+			transform: translateY(-50%);
+			width: 80%;
+		}
 		
-	div.project_wrapper div.project_caption
+	.project_caption
 	{
-		font-size: 0.8em;
-		margin-top: 5px;
-		margin-bottom: -29px;
+		font-size: 0.8rem;
+		margin: 0;
+		text-align: center;
 	}
 		
-	div.project_wrapper div.project_nav
+	.project_nav
 	{
-		margin: 20px auto;
+		margin: 10px auto 0;
 		text-align: center;
 	}
 	
-		div.project_wrapper div.project_nav span
+		.project_nav span
 		{
 			font-size: 1.5em;
 			opacity: 0.2;
 		}
 		
-		div.project_wrapper div.project_nav span.cycle-pager-active
+		.project_nav span.cycle-pager-active
 		{
 			opacity: 1.0;
 		}
